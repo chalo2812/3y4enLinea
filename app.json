@@ -8,8 +8,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.enLinea"
+      "package": "com.enlinea"
     }
-  },
-  "name": "3y4enLinea"
+  }
 }

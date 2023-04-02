@@ -1,14 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-//import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-//import { Icon } from "@rneui/themed";
-import { StyleSheet, Text, View } from 'react-native';
+import Loading from './components/Loading';
+import { StyleSheet, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.loading}>Loading Spinner</Text>
-      <StatusBar style="auto" />
+      <Loading/>
     </View>
   );
 }
@@ -21,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   loading: {
-    fontSize: 30,
+    fontSize: 60,
     alignItems: 'center'
   }
 });
