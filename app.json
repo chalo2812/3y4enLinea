@@ -3,6 +3,7 @@
     "name": "3y4enLinea",
     "slug": "3y4enlinea",
     "version": "1.0.0",
+    "icon": "",
     "sdkVersion": "45.0.0",
     "assetBundlePatterns": [
       "**/*"

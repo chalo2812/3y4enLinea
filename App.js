@@ -1,26 +1,30 @@
 import React, { useState } from 'react';
 import Loading from './components/Loading';
 import { Image, StyleSheet, View } from "react-native";
+import { Avatar, Header } from "@rneui/themed";
 import { useEffect } from 'react';
 import backgroundTaTeTi from "./assets/ttt_board.png";
 
 export default function App() {
-  
   const [load, setLoad] = useState(true);
-
   useEffect(() => {
-    setInterval(() => {
-      setLoad((load)=>!load);
-    }, 6000);
-  }, [load]);
+    setLoad(!load);
+  }, []);
   return (
-    <View style={styles.container}>
-      {load ? null : <Loading></Loading>}
-      {load ? null: <Image
-        source={backgroundTaTeTi}
-        resizeMode="stretch"
-        style={styles.image}
-      /> }
+    <View >
+      <Header
+        leftComponent={{ icon: 'menu', color: "#fff" }}
+        centerComponent={{ text: "3 y 4 En Linea", style: { color: "#fff", fontSize: 20, textShadowColor: "green" }}}
+        rightComponent={{ icon: "home", color: "#fff" }}
+      />
+      {load ? <Loading /> : null}
+      {load ? null : (
+        <Image
+          source={backgroundTaTeTi}
+          resizeMode="stretch"
+          style={styles.image}
+        />
+      )}
     </View>
   );
 }
